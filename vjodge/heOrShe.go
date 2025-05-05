@@ -13,7 +13,6 @@ func HeOrShe() {
 	for i := 0; i < len(listChar); i++ {
 		myname[listChar[i]] = 1
 	}
-	fmt.Println(myname)
 	if len(myname)%2 == 0 {
 		fmt.Println("CHAT WITH HER!")
 	} else {

@@ -1,9 +1,6 @@
 package vjodge
 
-import (
-	"fmt"
-	"log"
-)
+import "fmt"
 
 func VasyaGoldenTicket() {
 	var n int
@@ -18,19 +15,15 @@ func VasyaGoldenTicket() {
 
 	for i, c := range digitsStr {
 		digits[i] = int(c - '0')
-		log.Printf("loop: %d, the array: %v\n", i, digits)
 		totalSum += digits[i]
-		log.Printf("the total sum in: %d\n", totalSum)
 	}
 
 	found := false
 
 	for minimumSegments := 2; minimumSegments <= n; minimumSegments++ {
 		if totalSum%minimumSegments != 0 {
-			log.Printf("inside (IF) the loop K: %d, totalsum: %d", minimumSegments, totalSum)
 			continue
 		}
-		log.Printf("the loop K: %d, totalsum: %d", minimumSegments, totalSum)
 
 		s := totalSum / minimumSegments
 		currentSum := 0
